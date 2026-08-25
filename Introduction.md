@@ -75,7 +75,59 @@ In a statement like let x = 42, the let x part is called a declaration, and the 
 let x;
 console.log(x); // logs "undefined"
 
+In essence, let x = 42 is equivalent to let x; x = 42.
 
+Variable scope
+A variable may belong to one of the following scopes:
+
+Global scope: The default scope for all code running in script mode.
+Module scope: The scope for code running in module mode.
+Function scope: The scope created with a function.
+In addition, variables declared with let or const can belong to an additional scope:
+
+Block scope: The scope created with a pair of curly braces (a block).
+
+When you declare a variable outside of any function, it is called a global variable, because it is available to any other code in the current document. When you declare a variable within a function, it is called a local variable, because it is available only within that function.
+
+let and const declarations can also be scoped to the block statement that they are declared in.
+if (Math.random() > 0.5) {
+  const y = 5;
+}
+console.log(y); // ReferenceError: y is not defined
+
+For example, the following code will log 5, because the scope of x is the global context (or the function context if the code is part of a function). The scope of x is not limited to the immediate if statement block.
+if (true) {
+  var x = 5;
+}
+console.log(x); // x is 5
+
+Variable hoisting
+var-declared variables are hoisted, meaning you can refer to the variable anywhere in its scope, even if its declaration isn't reached yet.
+console.log(x === undefined); // true
+var x = 3;
+
+(function () {
+  console.log(x); // undefined
+  var x = "local value";
+})();
+
+var x;
+console.log(x === undefined); // true
+x = 3;
+
+(function () {
+  var x;
+  console.log(x); // undefined
+  x = "local value";
+})();
+Because of hoisting, all var statements in a function should be placed as near to the top of the function as possible. This best practice increases the clarity of the code.
+
+console.log(x); // ReferenceError
+const x = 3;
+
+console.log(y); // ReferenceError
+let y = 3;
+Unlike var declarations, which only hoist the declaration but not its value, function declarations are hoisted entirely — you can safely call the function anywhere in its scope. See the hoisting glossary entry for more discussion.
 
 
 
