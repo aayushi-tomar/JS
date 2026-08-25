@@ -15,4 +15,56 @@ JavaScript and Java are similar in some ways but fundamentally different in some
 In contrast to Java's compile-time system of classes built by declarations, JavaScript supports a runtime system based on a small number of data types representing numeric, Boolean, and string values.
  JavaScript has a prototype-based object model instead of the more common class-based object model
 
- JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed
+ JavaScript is a very free-form language compared to Java. You do not have to declare all variables, classes, and methods. You do not have to be concerned with whether methods are public, private, or protected, and you do not have to implement interfaces. Variables, parameters, and function return types are not explicitly typed.
+
+ Java is a class-based programming language designed for fast execution and type safety. Type safety means, for instance, that you can't cast a Java integer into an object reference or access private memory by corrupting the Java bytecode.Java's class-based model means that programs consist exclusively of classes and their methods.
+
+ JavaScript	Java:-
+Object-oriented. No distinction between types of objects. Inheritance is through the prototype mechanism, and properties and methods can be added to any object dynamically.	Class-based. Objects are divided into classes and instances with all inheritance through the class hierarchy. Classes and instances cannot have properties or methods added dynamically.
+Variable data types are not declared (dynamic typing, loosely typed).	Variable data types must be declared (static typing, strongly typed).
+Cannot automatically write to hard disk.	Can automatically write to hard disk.
+
+Getting started with JavaScript:-
+A very useful tool for exploring JavaScript is the JavaScript Console (sometimes called the Web Console, or just the console): this is a tool which enables you to enter JavaScript and run it in the current page.
+console.log(eval("3 + 5"));
+
+(function () {
+  "use strict";
+  /* Start of your code */
+  function greetMe(yourName) {
+    alert(`Hello ${yourName}`);
+  }
+
+  greetMe("World");
+  /* End of your code */
+})();
+
+Grammar and types:-
+Basics:-
+JavaScript is case-sensitive and uses the Unicode character set. For example, the word Früh (which means "early" in German) could be used as a variable name.
+const Früh = "foobar";
+But, the variable früh is not the same as Früh because JavaScript is case sensitive.
+In JavaScript, instructions are called statements and are separated by semicolons (;).
+
+Declarations:-
+JavaScript has three kinds of variable declarations.
+
+var
+Declares a variable, optionally initializing it to a value.
+
+let
+Declares a block-scoped, local variable, optionally initializing it to a value.
+
+const
+Declares a block-scoped, read-only named constant.
+
+Variables
+You use variables as symbolic names for values in your application. The names of variables, called identifiers, conform to certain rules.
+A JavaScript identifier usually starts with a letter, underscore (_), or dollar sign ($). Subsequent characters can also be digits (0 – 9). Because JavaScript is case sensitive, letters include the characters A through Z (uppercase) as well as a through z (lowercase)
+
+Some examples of legal names are Number_hits, temp99, $credit, and _name.
+
+
+
+
+
