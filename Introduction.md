@@ -64,6 +64,17 @@ A JavaScript identifier usually starts with a letter, underscore (_), or dollar 
 
 Some examples of legal names are Number_hits, temp99, $credit, and _name.
 
+Declaring variables
+You can declare a variable in two ways:
+
+With the keyword var. For example, var x = 42. This syntax can be used to declare both local and global variables, depending on the execution context.
+With the keyword const or let. For example, let y = 13. This syntax can be used to declare a block-scope local variable
+
+Declaration and initialization
+In a statement like let x = 42, the let x part is called a declaration, and the = 42 part is called an initializer. The declaration allows the variable to be accessed later in code without throwing a ReferenceError, while the initializer assigns a value to the variable. In var and let declarations, the initializer is optional. If a variable is declared without an initializer, it is assigned the value undefined.
+let x;
+console.log(x); // logs "undefined"
+
 
 
 
