@@ -129,5 +129,7 @@ console.log(y); // ReferenceError
 let y = 3;
 Unlike var declarations, which only hoist the declaration but not its value, function declarations are hoisted entirely — you can safely call the function anywhere in its scope. See the hoisting glossary entry for more discussion.
 
+Global variables
+Global variables are in fact properties of the global object.
 
 
