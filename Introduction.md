@@ -122,7 +122,7 @@ x = 3;
 })();
 Because of hoisting, all var statements in a function should be placed as near to the top of the function as possible. This best practice increases the clarity of the code.
 
-console.log(x); // ReferenceError
+console.log(x); // ReferenceError(RF)
 const x = 3;
 
 console.log(y); // ReferenceError
